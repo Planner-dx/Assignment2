@@ -1,0 +1,49 @@
+{
+  "submission_info": {
+    "student_name": "Planner-dx",
+    "github_repo": "https://github.com/Planner-dx/Assignment2",
+    "submission_date": "2026-03-12",
+    "course": "AAE5303",
+    "assignment": "Assignment 2 - Visual Odometry"
+  },
+  "dataset": {
+    "name": "HKisland_GNSS03",
+    "scene": "Island",
+    "source": "MARS-LVIG"
+  },
+  "system_config": {
+    "framework": "ORB-SLAM3",
+    "mode": "Monocular",
+    "docker_image": "liangyu99/orbslam3_ros1:latest",
+    "trajectory_file": "KeyFrameTrajectory.txt",
+    "nFeatures": 1500,
+    "scaleFactor": 1.2,
+    "nLevels": 8,
+    "iniThFAST": 20,
+    "minThFAST": 7
+  },
+  "evaluation_results": {
+    "ate_rmse_m": 2.006944,
+    "ate_mean_m": 1.822636,
+    "ate_median_m": 1.573759,
+    "ate_std_m": 0.840132,
+    "ate_min_m": 0.667102,
+    "ate_max_m": 4.900439,
+    "rpe_trans_drift_m_per_m": 1.9044,
+    "rpe_rot_drift_deg_per_100m": 126.96,
+    "completeness_percent": 27.2,
+    "matched_poses": 532,
+    "gt_poses": 1955,
+    "estimated_poses": 546,
+    "scale_correction": 1.097361
+  },
+  "evaluation_protocol": {
+    "tool": "evo",
+    "alignment": "Sim(3) Umeyama",
+    "correct_scale": true,
+    "t_max_diff_s": 0.1,
+    "rpe_delta_m": 10,
+    "rpe_delta_unit": "m"
+  },
+  "notes": "CameraTrajectory.txt unavailable due to segmentation fault on Docker shutdown. KeyFrameTrajectory.txt used instead, which reduces completeness to 27.2%."
+}
